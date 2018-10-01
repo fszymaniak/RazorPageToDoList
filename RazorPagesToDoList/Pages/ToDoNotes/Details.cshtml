@@ -1,0 +1,61 @@
+﻿@page
+@model RazorPagesToDoList.Pages.ToDoNotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ToDoNote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.Priority)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.Priority)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.DueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.DueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.TaskDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.TaskDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.DutyHolder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.DutyHolder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.InProgress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.InProgress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.Done)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.Done)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ToDoNote.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

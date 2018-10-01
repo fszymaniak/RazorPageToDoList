@@ -1,0 +1,64 @@
+﻿@page
+@model RazorPagesToDoList.Pages.ToDoNotes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ToDoNote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.Priority)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.Priority)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.DueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.DueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.TaskDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.TaskDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.DutyHolder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.DutyHolder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.InProgress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.InProgress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDoNote.Done)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDoNote.Done)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ToDoNote.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
