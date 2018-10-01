@@ -1,0 +1,68 @@
+﻿@page
+@model RazorPagesToDoList.Pages.ToDoNotes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>ToDoNote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ToDoNote.Title" class="control-label"></label>
+                <input asp-for="ToDoNote.Title" class="form-control" />
+                <span asp-validation-for="ToDoNote.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoNote.Priority" class="control-label"></label>
+                <input asp-for="ToDoNote.Priority" class="form-control" />
+                <span asp-validation-for="ToDoNote.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoNote.DueDate" class="control-label"></label>
+                <input asp-for="ToDoNote.DueDate" class="form-control" />
+                <span asp-validation-for="ToDoNote.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoNote.TaskDescription" class="control-label"></label>
+                <input asp-for="ToDoNote.TaskDescription" class="form-control" />
+                <span asp-validation-for="ToDoNote.TaskDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoNote.DutyHolder" class="control-label"></label>
+                <input asp-for="ToDoNote.DutyHolder" class="form-control" />
+                <span asp-validation-for="ToDoNote.DutyHolder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="ToDoNote.InProgress" /> @Html.DisplayNameFor(model => model.ToDoNote.InProgress))
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="ToDoNote.Done" /> @Html.DisplayNameFor(model => model.ToDoNote.Done))
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
