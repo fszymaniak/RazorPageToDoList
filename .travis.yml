@@ -1,1 +1,8 @@
 language: csharp
+solution: RazorPagesToDoList.sln
+dotnet: 2.1.4
+install: 
+    - dotnet restore
+    - (cd RazorPagesToDoList && npm install)
+script: 
+    - dotnet build
